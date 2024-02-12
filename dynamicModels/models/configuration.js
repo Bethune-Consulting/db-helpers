@@ -22,9 +22,17 @@ module.exports = (sequelize, DataTypes, schema) => {
             },
             user_id: DataTypes.STRING,
             category: DataTypes.STRING,
-            openai_key: DataTypes.STRING,
+            openai_key: DataTypes.STRING(10485760),
             ai_model: DataTypes.STRING,
             price_class: DataTypes.STRING,
+            logo: DataTypes.STRING(10485760),
+            color: DataTypes.STRING,
+            name: DataTypes.STRING,
+            instructions: DataTypes.STRING(10485760),
+            file_name: DataTypes.STRING(10485760),
+            file_list: DataTypes.STRING(10485760),
+            feedback: DataTypes.STRING(10485760),
+            questions: DataTypes.ARRAY(DataTypes.STRING),
             is_deleted: {
                 type: DataTypes.BOOLEAN,
                 defaultValue: false
